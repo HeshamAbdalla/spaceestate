@@ -112,18 +112,7 @@
             <div class="ui middle aligned stackable grid container">
                 <div class="row">
                     <div class="eight wide right floated column">
-                        <!-- <div style="width: 600px; height: 350px; overflow: hidden">
-                        <iframe>
-                        style ="position: relative; top:-100px"
-                        scrolling="no"
-                        width="500"
-                        height="450"
-                        frameborder="0" style="border:0"
-                        src="https://www.google.com/moon/#lat=9.633424&lon=-19.893676&zoom=7&map=visible&apollo=" allowfullscreen>
-                    </iframe>
-                    <img class="ui large rounded image" src="img/martian-face.jpg">
-                </div> -->
-                <img class="ui large rounded image" src="img/moony.gif" />
+                <img class="ui large rounded image" src="images/spacehome.jpg" />
             </div>
             <div class="eight wide column">
                 <h3 class="ui header">Exotic Locations</h3>
@@ -150,238 +139,202 @@
     </div>
 </div>
 <div id="designer" class="ui vertical stripe segment">
-    <div class="ui twelve column grid container centered">
-        <h1 class="ui header inverted">Designer</h1>
+   <div id="designerheading" class="ui twelve column grid container centered">
+        <h1 class="ui header inverted">Calculator</h1>
     </div>
     <div class="ui raised very padded container segment">
-        <h3>Estimated Price: $$$$$$$$$$$$$$</h3>
+        <h3>Estimated Price: $<span id="price">0</span></h3>
         <h6 class="ui horizontal header divider">
             Options
         </h6>
         <form>
-            <div class="ui large form">
-                <p class="ui text">House</p>
-                <div class="three fields">
-                    <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="bedroom">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">No. of Bedrooms</div>
-                            <div class="menu">
-                                <div class="item" data-value="bedrooms1">One</div>
-                                <div class="item" data-value="bedrooms2">Two</div>
-                                <div class="item" data-value="bedrooms3">Three</div>
-                                <div class="item" data-value="bedrooms4">Four</div>
-                                <div class="item" data-value="bedrooms5">Five</div>
-                                <div class="item" data-value="bedrooms6">Six</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="bathroom">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">No. of Bathrooms</div>
-                            <div class="menu">
-                                <div class="item" data-value=1>One</div>
-                                <div class="item" data-value=2>Two</div>
-                                <div class="item" data-value=3>Three</div>
-                                <div class="item" data-value=4>Four</div>
-                                <div class="item" data-value=5>Five</div>
-                                <div class="item" data-value=6>Six</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="squarefootage">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Square Footage</div>
-                            <div class="menu">
-                                <div class="item" data-value=1000>1000</div>
-                                <div class="item" data-value=2000>2000</div>
-                                <div class="item" data-value=3000>3000</div>
-                                <div class="item" data-value=4000>4000</div>
-                                <div class="item" data-value=5000>5000</div>
-                                <div class="item" data-value=6000>6000+</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="ui large form">
+        <p class="ui text">House</p>
+        <div class="three fields">
+          <div class="field">
+            <div class="ui selection dropdown">
+            <input type="hidden" name="bedroom">
+              <i class="dropdown icon"></i>
+              <div class="default text">No. of Bedrooms</div>
+              <div class="menu">
+                <div class="item" data-value=1>One</div>
+                <div class="item" data-value=2>Two</div>
+                <div class="item" data-value=3>Three</div>
+                <div class="item" data-value=4>Four</div>
+                <div class="item" data-value=5>Five</div>
+                <div class="item" data-value=6>Six</div>
+              </div>
             </div>
-            <div class="ui large form">
-                <p class="ui text">Location</p>
-                <div class="two fields">
-                    <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="lottype">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Type</div>
-                            <div class="menu">
-                                <div class="item" data-value="basic">Basic</div>
-                                <div class="item" data-value="premium">Premium</div>
-                                <div class="item" data-value="luxurious">Luxurious</div>
-                                <div class="item" data-value="historic">Historic</div>
-                                <div class="item" data-value="custom">Custom</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="acreage">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Acreage</div>
-                            <div class="menu">
-                                <div class="item" data-value=1>One</div>
-                                <div class="item" data-value=2>Two</div>
-                                <div class="item" data-value=3>Three</div>
-                                <div class="item" data-value=4>Four</div>
-                                <div class="item" data-value=5>Five</div>
-                                <div class="item" data-value=6>Six</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="field">
+            <div class="ui selection dropdown">
+            <input type="hidden" name="bathroom">
+             <i class="dropdown icon"></i>
+              <div class="default text">No. of Bathrooms</div>
+              <div class="menu">
+                <div class="item" data-value=1>One</div>
+                <div class="item" data-value=2>Two</div>
+                <div class="item" data-value=3>Three</div>
+                <div class="item" data-value=4>Four</div>
+                <div class="item" data-value=5>Five</div>
+                <div class="item" data-value=6>Six</div>
+              </div>
             </div>
-            <div class="ui large form">
-                <p class="ui text">Features</p>
-                <div class="three fields">
-                    <div class="field">
-                        <div class="grouped fields">
-                            <label>Indoor</label>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="scenicview">
-                                    <label>Scenic View</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="pool">
-                                    <label>Outdoor Pool</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="waterfront">
-                                    <label>Waterfront</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="golfcourse">
-                                    <label>Golf Course</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="cornerlot">
-                                    <label>Corner Lot</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="grouped fields">
-                            <label>Outdoor</label>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="hottub">
-                                    <label>Hot Tub</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="tennis">
-                                    <label>Tennis Court</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="horse">
-                                    <label>Horse Stable</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="yacht">
-                                    <label>Yacht Parking</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="senior">
-                                    <label>Senior Center</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="grouped fields">
-                            <label>Amenities</label>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="culdesac">
-                                    <label>Cul-de-sac</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="nightclub">
-                                    <label>Night Club</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="rocketshipdock">
-                                    <label>Rocketship Dock</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="garage">
-                                    <label>Lunar Rover Garage</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="escapecapsule">
-                                    <label>Escape Capsule</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="field">
+            <div class="ui selection dropdown">
+              <input type="hidden" name="squarefootage">
+              <i class="dropdown icon"></i>
+              <div class="default text">Square Footage</div>
+              <div class="menu">
+                <div class="item" data-value=1000>1000</div>
+                <div class="item" data-value=2000>2000</div>
+                <div class="item" data-value=3000>3000</div>
+                <div class="item" data-value=4000>4000</div>
+                <div class="item" data-value=5000>5000</div>
+                <div class="item" data-value=6000>6000</div>
+              </div>
             </div>
-            <div class="ui equal width field">
-                <div class="field">
-                    <div class="fluid ui submit button" onclick="updateForm()">Calculate</div>
-                </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui large form">
+        <p class="ui text">Location</p>
+        <div class="two fields">
+          <div class="field">
+            <div class="ui selection dropdown">
+              <input type="hidden" name="lottype">
+              <i class="dropdown icon"></i>
+              <div class="default text">Type</div>
+              <div class="menu">
+                <div class="item" data-value="basic">Basic</div>
+                <div class="item" data-value="premium">Premium</div>
+                <div class="item" data-value="luxurious">Luxurious</div>
+                <div class="item" data-value="historic">Historic</div>
+                <div class="item" data-value="custom">Custom</div>
+              </div>
             </div>
-        </form>
-    </div>
+          </div>
+          <div class="field">
+            <div class="ui selection dropdown">
+              <input type="hidden" name="acreage">
+              <i class="dropdown icon"></i>
+              <div class="default text">Acreage</div>
+              <div class="menu">
+                <div class="item" data-value=1>One</div>
+                <div class="item" data-value=2>Two</div>
+                <div class="item" data-value=3>Three</div>
+                <div class="item" data-value=4>Four</div>
+                <div class="item" data-value=5>Five</div>
+                <div class="item" data-value=6>Six</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui equal width large form">
+        <p class="ui text">Features</p>
+        <div class="two fields">
+          <div class="field">
+            <div class="grouped fields">
+              <label>Indoor</label>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="oven">
+                  <label>NASA-Certified Space Oven</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="floor">
+                  <label>Hardwood Floors</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="security">
+                  <label>24/7 Lunar Home Security</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="gym">
+                  <label>Tuff-as-Moonrock&#8482; Gym</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="wifi">
+                  <label>Range-extended Wifi</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="grouped fields">
+              <label>Outdoor</label>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="pool">
+                  <label>Antigravity Pool</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="garage">
+                  <label>Lunar Rover Garage</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="pad">
+                  <label>Rocketship Landing Pad</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="shield">
+                  <label>Asteroid Shield</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="garden">
+                  <label>100% Genetically-modified Garden</label>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="ui equal width field">
+        <div class="field">
+          <div class="ui fluid inverted blue submit button" onclick="updateForm()">Calculate</div>
+        </div>
+      </div>
+      </form>
+</div>
 </div>
 </div>
 <div id="contact" class="ui inverted vertical footer segment">
-    <div class="ui container">
-        <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="three wide column">
-                <h4 class="ui inverted header">Credits</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Tal</a>
-                    <a href="#" class="item">Hesham</a>
-                    <a href="#" class="item">Haris</a>
-                </div>
-            </div>
-            <div class="seven wide column">
-                <h4 class="ui inverted header"><i class="music icon" style="font-size:18px"></i>Aquatic Ambiance</h4>
-                <!-- <audio class="audio" controls="" autoplay>
-                    <source src="aquatic-ambiance.mp3" type="audio/mpeg">
-                    </audio> -->
-                </div>
-            </div>
-        </div>
+<div class="ui container">
+  <div class="ui stackable inverted divided equal height stackable grid">
+    <div class="three wide column">
+      <h4 class="ui inverted header">Credits</h4>
+      <div class="ui inverted link list">
+        <a href="#" class="item">Tal</a>
+        <a href="#" class="item">Hesham</a>
+        <a href="#" class="item">Haris</a>
+      </div>
     </div>
+    <div class="seven wide column">
+      <h4 class="ui inverted header"><i class="music icon" style="font-size:18px"></i>Aquatic Ambiance</h4>
+      <audio class="audio" controls="" autoplay>
+        <source src="aquatic-ambiance.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+</div>
+</div>
 </div>
 
 <!-- build:js scripts/vendor.js -->
