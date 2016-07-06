@@ -8,7 +8,7 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- Place favicon.ico in the root directory -->
 
@@ -24,7 +24,8 @@
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/header.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/image.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/menu.css">
-
+    <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/form.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/modal.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/divider.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/dropdown.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/segment.css">
@@ -38,315 +39,357 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-    <style type="text/css">
-
-    .hidden.menu {
-        display: none;
-    }
-    .ui.inverted.segment, .ui.primary.inverted.segment {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("https://upload.wikimedia.org/wikipedia/commons/b/b3/Full_moon.jpeg");
-        background-size: cover;
-
-    }
-    .masthead.segment {
-        min-height: 700px;
-        padding: 1em 0em;
-    }
-    .masthead .logo.item img {
-        margin-right: 1em;
-    }
-    .masthead .ui.menu .ui.button {
-        margin-left: 0.5em;
-    }
-    .masthead h1.ui.header {
-        margin-top: 3em;
-        margin-bottom: 0em;
-        font-size: 4em;
-        font-weight: normal;
-    }
-    .masthead h2 {
-        font-size: 1.7em;
-        font-weight: normal;
-    }
-
-    .ui.vertical.stripe {
-        padding: 8em 0em;
-    }
-    .ui.vertical.stripe h3 {
-        font-size: 2em;
-    }
-    .ui.vertical.stripe .button + h3,
-    .ui.vertical.stripe p + h3 {
-        margin-top: 3em;
-    }
-    .ui.vertical.stripe .floated.image {
-        clear: both;
-    }
-    .ui.vertical.stripe p {
-        font-size: 1.33em;
-    }
-    .ui.vertical.stripe .horizontal.divider {
-        margin: 3em 0em;
-    }
-
-    .quote.stripe.segment {
-        padding: 0em;
-    }
-    .quote.stripe.segment .grid .column {
-        padding-top: 5em;
-        padding-bottom: 5em;
-    }
-
-    .footer.segment {
-        padding: 5em 0em;
-    }
-
-    .secondary.pointing.menu .toc.item {
-        display: none;
-    }
-
-    @media only screen and (max-width: 700px) {
-        .ui.fixed.menu {
-            display: none !important;
-        }
-        .secondary.pointing.menu .item,
-        .secondary.pointing.menu .menu {
-            display: none;
-        }
-        .secondary.pointing.menu .toc.item {
-            display: block;
-        }
-        .masthead.segment {
-            min-height: 350px;
-        }
-        .masthead h1.ui.header {
-            font-size: 2em;
-            margin-top: 1.5em;
-        }
-        .masthead h2 {
-            margin-top: 0.5em;
-            font-size: 1.5em;
-        }
-    }
-
-
-    </style>
 
 </head>
-<body>
-
-    <!-- Following Menu -->
-    <div class="ui large top fixed hidden menu">
-        <div class="ui container">
-            <a class="active item">Home</a>
-            <a class="item">Houses</a>
-            <a class="item">Lands</a>
-            <a class="item">About</a>
-            <div class="right menu">
-                <div class="item">
-                    <a class="ui button">Buy a house</a>
-                </div>
-                <div class="item">
-                    <a class="ui primary button">Rent a house</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sidebar Menu -->
-    <div class="ui vertical inverted sidebar menu">
-        <a class="active item">Home</a>
-        <a class="item">Houses</a>
-        <a class="item">Lands</a>
-        <a class="item">About</a>
-        <a class="item">Buy a house</a>
-        <a class="item">Rent a house</a>
-    </div>
-
-
-    <!-- Page Contents -->
+    <body>
     <div class="pusher">
-        <div class="ui inverted vertical masthead center aligned segment">
-
-            <div class="ui container">
-                <div class="ui large secondary inverted pointing menu">
-                    <a class="toc item">
-                        <i class="sidebar icon"></i>
-                    </a>
-                    <a class="active item">Home</a>
-                    <a class="item">Houses</a>
-                    <a class="item">Lands</a>
-                    <a class="item">About</a>
-                    <div class="right item">
-                        <a class="ui inverted button">Buy a house</a>
-                        <a class="ui inverted button">Rent a house</a>
+        <div id="banner" class="ui inverted vertical masthead center aligned segment">
+            <div class="homepage-hero-module">
+                    <div class="ui large secondary inverted menu">
+                        <a class="item" href="#"><i class="home icon" style="font-size:24px"></i>Moon Realty Inc.</a>
+                        <div class="right item">
+                            <a class="item" href="#homes">Homes</a>
+                            <a class="item" href="#locations">Locations</a>
+                            <a class="item" href="#designer">Designer</a>
+                        </div>
+                    </div>
+                <div class="ui text container">
+                    <h1 class="ui inverted header">
+                        Buy a House in Space
+                    </h1>
+                    <h2>Locations on Mars and the Moon now available</h2>
+                    <div class="ui massive inverted blue button" onclick="showModal()">Get Started</div>
+                </div>
+                <div class="ui modal">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        Sign in
+                    </div>
+                    <div class="image content">
+                        <div class="image">
+                            <i class="archive icon"></i>
+                        </div>
+                        <div class="">
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="ui text container">
-
-                <h1 class="ui inverted header">
-                    Get your next House on the Moon
-                </h1>
-                <h2>Get your first house and get a hover shuttle for free</h2>
-                <div class="ui huge primary button">Ready to buy<i class="right arrow icon"></i></div>
+                <div class="video-container">
+                    <div class="filter"></div>
+                    <video autoplay loop class="fillWidth">
+                        <source src="videos/pluto.mp4" type="video/mp4" />
+                    </video>
+                </div>
             </div>
 
-        </div>
-
-        <div class="ui vertical stripe segment">
+        <div id="homes" class="ui vertical stripe segment">
             <div class="ui middle aligned stackable grid container">
                 <div class="row">
                     <div class="eight wide column">
-                        <h3 class="ui header">What's it all about?</h3>
-                        <p>We're a space real estate agency who knows the galaxy, the market and the process. We can advise you when to think on it, sleep on it or go all in on it. Because this is about much more than bricks and sticks. This is about your future home in the moon. And you don't want to live with it. You want to love it. </p>
-                        <h3 class="ui header">HouseMoon luxury Houses</h3>
-                        <p>With an unwavering commitment to customer service, MoonHouse brings together more luxury home buyers and sellers than anyone in the Galaxy. Through our affiliations with AI ZEN International Space AI, Who's Who in Luxury Real Estate, and Luxury Portfolio International™ Space Stations, we ensure the greatest possible exposure and results.</p>
+                        <h3 class="ui header">Your Next Dream Home</h3>
+                        <p>We are a Space real estate agency who knows the galaxy, the market, and the process. We can advise you when to think on it, sleep on it, or go all in. Because this is about much more than bricks and sticks. This is about your future home in outer space. You don't want to just live in it. You want to love it.</p>
                     </div>
-                    <div class="six wide right floated column">
-                        <img src="http://faktor.mk/wp-content/uploads/2015/10/Mikael-Genbergs-The-Moonh-012.jpg" class="ui large bordered rounded image">
+                    <div class="eight wide right floated column">
+                        <div class="regular slider">
+                            <div>
+                                <img class="house-image" src="images/house1.png">
+                            </div>
+                            <div>
+                                <img class="house-image" src="images/house2.png">
+                            </div>
+                            <div>
+                                <img class="house-image" src="images/house3.png">
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="locations" class="ui vertical stripe segment">
+            <div class="ui middle aligned stackable grid container">
                 <div class="row">
-                    <div class="center aligned column">
-                        <a class="ui huge button">Take a Look</a>
+                    <div class="eight wide right floated column">
+                        <!-- <div style="width: 600px; height: 350px; overflow: hidden">
+                        <iframe>
+                        style ="position: relative; top:-100px"
+                        scrolling="no"
+                        width="500"
+                        height="450"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/moon/#lat=9.633424&lon=-19.893676&zoom=7&map=visible&apollo=" allowfullscreen>
+                    </iframe>
+                    <img class="ui large rounded image" src="img/martian-face.jpg">
+                </div> -->
+                <img class="ui large rounded image" src="img/moony.gif" />
+            </div>
+            <div class="eight wide column">
+                <h3 class="ui header">Exotic Locations</h3>
+                <p>The "Face on Mars," Cydonia lies in the planet's northern hemisphere in a transitional zone between the heavily cratered regions to the south and smooth plains to the north. Some planetologists believe that the northern areas may once have been ocean beds and that Cydonia may once have been a coastal zone!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+            <div class="column">
+                <h1>Dreams into Reality</h1>
+                <p>Our personalized plans can fit any budget or vision.</p>
+            </div>
+            <div class="column">
+                <i class="circular child icon" style="font-size:48px"></i>
+                <i class="circular travel icon" style="font-size:48px"></i>
+                <i class="circular dollar icon" style="font-size:48px"></i>
+                <i class="circular green checkmark icon" style="font-size:48px"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="designer" class="ui vertical stripe segment">
+    <div class="ui twelve column grid container centered">
+        <h1 class="ui header inverted">Designer</h1>
+    </div>
+    <div class="ui raised very padded container segment">
+        <h3>Estimated Price: $$$$$$$$$$$$$$</h3>
+        <h6 class="ui horizontal header divider">
+            Options
+        </h6>
+        <form>
+            <div class="ui large form">
+                <p class="ui text">House</p>
+                <div class="three fields">
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="bedroom">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">No. of Bedrooms</div>
+                            <div class="menu">
+                                <div class="item" data-value="bedrooms1">One</div>
+                                <div class="item" data-value="bedrooms2">Two</div>
+                                <div class="item" data-value="bedrooms3">Three</div>
+                                <div class="item" data-value="bedrooms4">Four</div>
+                                <div class="item" data-value="bedrooms5">Five</div>
+                                <div class="item" data-value="bedrooms6">Six</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="bathroom">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">No. of Bathrooms</div>
+                            <div class="menu">
+                                <div class="item" data-value=1>One</div>
+                                <div class="item" data-value=2>Two</div>
+                                <div class="item" data-value=3>Three</div>
+                                <div class="item" data-value=4>Four</div>
+                                <div class="item" data-value=5>Five</div>
+                                <div class="item" data-value=6>Six</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="squarefootage">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Square Footage</div>
+                            <div class="menu">
+                                <div class="item" data-value=1000>1000</div>
+                                <div class="item" data-value=2000>2000</div>
+                                <div class="item" data-value=3000>3000</div>
+                                <div class="item" data-value=4000>4000</div>
+                                <div class="item" data-value=5000>5000</div>
+                                <div class="item" data-value=6000>6000+</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="ui vertical stripe quote segment">
-            <div class="ui equal width stackable internally celled grid">
-                <div class="center aligned row">
-                    <div class="column">
-                        <h3>Beachfront mesa on Cydonia</h3>
-                        <p>The "Face on Mars," Cydonia lies in the planet's northern hemisphere in a transitional zone between the heavily cratered regions to the south and smooth plains to the north. Some planetologists believe that the northern areas may once have been ocean beds and that Cydonia may once have been a coastal zone!</p>
-
+            <div class="ui large form">
+                <p class="ui text">Location</p>
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="lottype">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Type</div>
+                            <div class="menu">
+                                <div class="item" data-value="basic">Basic</div>
+                                <div class="item" data-value="premium">Premium</div>
+                                <div class="item" data-value="luxurious">Luxurious</div>
+                                <div class="item" data-value="historic">Historic</div>
+                                <div class="item" data-value="custom">Custom</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="column">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Martian_face_viking.jpg" class="ui medium bordered rounded image">
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="acreage">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Acreage</div>
+                            <div class="menu">
+                                <div class="item" data-value=1>One</div>
+                                <div class="item" data-value=2>Two</div>
+                                <div class="item" data-value=3>Three</div>
+                                <div class="item" data-value=4>Four</div>
+                                <div class="item" data-value=5>Five</div>
+                                <div class="item" data-value=6>Six</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="ui large form">
+                <p class="ui text">Features</p>
+                <div class="three fields">
+                    <div class="field">
+                        <div class="grouped fields">
+                            <label>Indoor</label>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="scenicview">
+                                    <label>Scenic View</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="pool">
+                                    <label>Outdoor Pool</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="waterfront">
+                                    <label>Waterfront</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="golfcourse">
+                                    <label>Golf Course</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="cornerlot">
+                                    <label>Corner Lot</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="grouped fields">
+                            <label>Outdoor</label>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="hottub">
+                                    <label>Hot Tub</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="tennis">
+                                    <label>Tennis Court</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="horse">
+                                    <label>Horse Stable</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="yacht">
+                                    <label>Yacht Parking</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="senior">
+                                    <label>Senior Center</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="grouped fields">
+                            <label>Amenities</label>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="culdesac">
+                                    <label>Cul-de-sac</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="nightclub">
+                                    <label>Night Club</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="rocketshipdock">
+                                    <label>Rocketship Dock</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="garage">
+                                    <label>Lunar Rover Garage</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="escapecapsule">
+                                    <label>Escape Capsule</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui equal width field">
+                <div class="field">
+                    <div class="fluid ui submit button" onclick="updateForm()">Calculate</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<div id="contact" class="ui inverted vertical footer segment">
+    <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+                <h4 class="ui inverted header">Credits</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Tal</a>
+                    <a href="#" class="item">Hesham</a>
+                    <a href="#" class="item">Haris</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header"><i class="music icon" style="font-size:18px"></i>Aquatic Ambiance</h4>
+                <!-- <audio class="audio" controls="" autoplay>
+                    <source src="aquatic-ambiance.mp3" type="audio/mpeg">
+                    </audio> -->
+                </div>
+            </div>
         </div>
-
-        <!-- <div class="ui vertical stripe segment">
-        <div class="ui text container">
-        <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-        <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-        <a class="ui large button">Read More</a>
-        <h4 class="ui horizontal header divider">
-        <a href="#">Case Studies</a>
-    </h4>
-    <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-    <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-    <a class="ui large button">I'm Still Quite Interested</a>
+    </div>
 </div>
-</div>
-
-
-<div class="ui inverted vertical footer segment">
-<div class="ui container">
-<div class="ui stackable inverted divided equal height stackable grid">
-<div class="three wide column">
-<h4 class="ui inverted header">About</h4>
-<div class="ui inverted link list">
-<a href="#" class="item">Sitemap</a>
-<a href="#" class="item">Contact Us</a>
-<a href="#" class="item">Religious Ceremonies</a>
-<a href="#" class="item">Gazebo Plans</a>
-</div>
-</div>
-<div class="three wide column">
-<h4 class="ui inverted header">Services</h4>
-<div class="ui inverted link list">
-<a href="#" class="item">Banana Pre-Order</a>
-<a href="#" class="item">DNA FAQ</a>
-<a href="#" class="item">How To Access</a>
-<a href="#" class="item">Favorite X-Men</a>
-</div>
-</div>
-<div class="seven wide column">
-<h4 class="ui inverted header">Footer Header</h4>
-<p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-</div>
-</div>
-</div>
-</div>
-</div> -->
-<!-- FIRE -->
-<!-- <div class="fire"><h1>Moon Realty, Inc.</h1></div>
-<div id="ire">More fire</div>
-<div class="moon">
-<img src='https://developers.google.com/earth/documentation/images/moon_example.gif' />
-<br>
-<button disabled>New Location</button>
-<button onclick="dropHouse()">Place House Here</button>
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="/bower_components/semantic/dist/semantic.js"></script>
 <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+<script src="/bower_components/underscore/underscore.js"></script>
+
+</script>
 <!-- endbower -->
 <!-- endbuild -->
 
