@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $(".dropdown")
+    $('.dropdown')
     .dropdown();
 
     $('.ui.checkbox')
@@ -9,11 +9,11 @@ $(document).ready(function() {
     $('.ui.radio.checkbox')
     .checkbox();
 
-    $("a").on("click", function(event){
-        if (this.hash !== "") {
+    $('a').on('click', function(event){
+        if (this.hash !== '') {
             event.preventDefault();
             var hash = this.hash;
-            $("html, body").animate({
+            $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 600, function() {
                 window.location.hash = hash;
@@ -80,8 +80,8 @@ $(document).ready(function() {
         });
     }
 
-    $('.audio').prop("volume", 0.02);
-    $(".regular").slick({
+    $('.audio').prop('volume', 0.02);
+    $('.regular').slick({
         arrows: false,
         dots: false,
         infinite: true,
@@ -96,8 +96,8 @@ function updateForm() {
     var raw = $('form').serializeArray();
     var data = [];
     for(var key in raw) {
-        if (raw[key]["value"] !== "") {
-            data.push(raw[key]["value"]);
+        if (raw[key]['value'] !== '') {
+            data.push(raw[key]['value']);
         }
     }
     console.log(data);
@@ -105,5 +105,5 @@ function updateForm() {
 
 
 function showModal() {
-    $(".ui.modal").modal({blurring: true}).modal('show');
+    $('.ui.modal').modal({blurring: true}).modal('show');
 }

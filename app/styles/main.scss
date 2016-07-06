@@ -92,8 +92,10 @@
     height: inherit;
 }
 #designer {
-    background-image: url(../img/designer.jpg);
+    background-image: url(../images/sky-lights-space-dark.jpg);
     background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 #designer h1 {
     margin-top: 0em;
