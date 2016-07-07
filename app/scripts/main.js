@@ -232,4 +232,5 @@ function updateForm() {
 
 function clearForm() {
   $('form').form('clear');
+  $('.value h3').text("Estimated Price $0").transition('pulse');
 }
