@@ -5,8 +5,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Buy a House on the Moon!</title>
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans" rel="stylesheet">
+    
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/transition.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/checkbox.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/dimmer.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/components/static.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -44,15 +45,14 @@
 
 </head>
     <body>
-    <div class="pusher">
         <div id="banner" class="ui inverted vertical masthead center aligned segment">
             <div class="homepage-hero-module">
-                    <div class="ui large secondary inverted menu">
+                    <div class="ui inverted top fixed menu">
                         <a class="item" href="#"><i class="home icon" style="font-size:24px"></i>Moon Realty Inc.</a>
-                        <div class="right item">
+                        <div id="right" class="right item">
                             <a class="item" href="#homes">Homes</a>
                             <a class="item" href="#locations">Locations</a>
-                            <a class="item" href="#designer">Designer</a>
+                            <a class="item" href="#designerheading">Calculator</a>
                         </div>
                     </div>
                 <div class="ui text container">
@@ -60,21 +60,8 @@
                         Buy a House in Space
                     </h1>
                     <h2>Locations on Mars and the Moon now available</h2>
-                    <div class="ui massive inverted blue button" onclick="showModal()">Get Started</div>
-                </div>
-                <div class="ui modal">
-                    <i class="close icon"></i>
-                    <div class="header">
-                        Sign in
-                    </div>
-                    <div class="image content">
-                        <div class="image">
-                            <i class="archive icon"></i>
-                        </div>
-                        <div class="">
-                        </div>
-                    </div>
-                </div>
+                    <a href="#designerheading"><div class="ui massive inverted blue button">Get Started</div></a>
+                </div>   
             </div>
                 <div class="video-container">
                     <div class="filter"></div>
@@ -92,18 +79,7 @@
                         <p>We are a Space real estate agency who knows the galaxy, the market, and the process. We can advise you when to think on it, sleep on it, or go all in. Because this is about much more than bricks and sticks. This is about your future home in outer space. You don't want to just live in it. You want to love it.</p>
                     </div>
                     <div class="eight wide right floated column">
-                        <div class="regular slider">
-                            <div>
-                                <img class="house-image" src="images/house1.png">
-                            </div>
-                            <div>
-                                <img class="house-image" src="images/house2.png">
-                            </div>
-                            <div>
-                                <img class="house-image" src="images/house3.png">
-                            </div>
-
-                        </div>
+                        <img class="ui large rounded image" src="images/modernhouse.jpg">
                     </div>
                 </div>
             </div>
@@ -116,7 +92,7 @@
             </div>
             <div class="eight wide column">
                 <h3 class="ui header">Exotic Locations</h3>
-                <p>The "Face on Mars," Cydonia lies in the planet's northern hemisphere in a transitional zone between the heavily cratered regions to the south and smooth plains to the north. Some planetologists believe that the northern areas may once have been ocean beds and that Cydonia may once have been a coastal zone!</p>
+                <p>The "Face on Mars," Cydonia lies in the planet's northernf hemisphere in a transitional zone between the heavily cratered regions to the south and smooth plains to the north. Some planetologists believe that the northern areas may once have been ocean beds and that Cydonia may once have been a coastal zone!</p>
             </div>
         </div>
     </div>
@@ -138,205 +114,224 @@
         </div>
     </div>
 </div>
-<div id="designer" class="ui vertical stripe segment">
-   <div id="designerheading" class="ui twelve column grid container centered">
-        <h1 class="ui header inverted">Calculator</h1>
-    </div>
-    <div class="ui raised very padded container segment">
-        <h3>Estimated Price: $<span id="price">0</span></h3>
-        <h6 class="ui horizontal header divider">
-            Options
-        </h6>
-        <form>
-      <div class="ui large form">
-        <p class="ui text">House</p>
-        <div class="three fields">
-          <div class="field">
-            <div class="ui selection dropdown">
-            <input type="hidden" name="bedroom">
-              <i class="dropdown icon"></i>
-              <div class="default text">No. of Bedrooms</div>
-              <div class="menu">
-                <div class="item" data-value=1>One</div>
-                <div class="item" data-value=2>Two</div>
-                <div class="item" data-value=3>Three</div>
-                <div class="item" data-value=4>Four</div>
-                <div class="item" data-value=5>Five</div>
-                <div class="item" data-value=6>Six</div>
-              </div>
-            </div>
+
+      <!--- BEGIN OF FORM ---->
+<h1 class="ui centered header">Calculator</h1>
+        <form class="ui form"> 
+
+        <div class="ui four column doubling stackable grid container"><!--- CONTAINER ---->
+
+            <div class="sixteen wide column">
+              <div class="field">
+                <h4 class="ui dividing header"> House Options </h4>
+              <div class="three fields"> <!--- HOUSE DROPDOWN ---->
+              <div class="field">
+                <select class="ui fluid dropdown" name="bedroom">
+                  <option value="">No. of Bedrooms</option>
+                  <option  value=1>One</option>
+                  <option  value=2>Two</option>
+                  <option  value=3>Three</option>
+                  <option  value=4>Four</option>
+                  <option  value=5>Five</option>
+                  <option  value=6>Six</option>
+              </select>
           </div>
+
+          
           <div class="field">
-            <div class="ui selection dropdown">
-            <input type="hidden" name="bathroom">
-             <i class="dropdown icon"></i>
-              <div class="default text">No. of Bathrooms</div>
-              <div class="menu">
-                <div class="item" data-value=1>One</div>
-                <div class="item" data-value=2>Two</div>
-                <div class="item" data-value=3>Three</div>
-                <div class="item" data-value=4>Four</div>
-                <div class="item" data-value=5>Five</div>
-                <div class="item" data-value=6>Six</div>
+              <select class="ui fluid dropdown" name="bathroom">
+              <option value="">No. of Bathrooms</option>
+                <option value=1>One</option>
+                <option value=2>Two</option>
+                <option value=3>Three</option>
+                <option value=4>Four</option>
+                <option value=5>Five</option>
+                <option value=6>Six</option>
+                </select>
               </div>
+
+          <div class="field">      
+             <select class="ui fluid dropdown" name="squarefootage">
+             <option value=""> SquareFT</option>
+                <option data-value=1000>1000 </option>
+                <option data-value=2000>2000 </option>
+                <option data-value=3000>3000 </option>
+                <option data-value=4000>4000 </option>
+                <option data-value=5000>5000 </option>
+                <option data-value=6000>6000 </option>
+                </select>
+               </div>
+             </div>
             </div>
-          </div>
+         </div><!--- END OF HOUSE DROPDOWN ---->
+     
+     
+        <!--- LOCATIONS DROPDOWN ---->
+        <div class="sixteen wide column">
           <div class="field">
-            <div class="ui selection dropdown">
-              <input type="hidden" name="squarefootage">
-              <i class="dropdown icon"></i>
-              <div class="default text">Square Footage</div>
-              <div class="menu">
-                <div class="item" data-value=1000>1000</div>
-                <div class="item" data-value=2000>2000</div>
-                <div class="item" data-value=3000>3000</div>
-                <div class="item" data-value=4000>4000</div>
-                <div class="item" data-value=5000>5000</div>
-                <div class="item" data-value=6000>6000</div>
+            <h4 class="ui dividing header"> Location </h4>
+          <div class="two fields">
+           <div class="field">
+              <select class="ui fluid dropdown" name="lottype">
+                  <option value=""> Type </option>
+                    <option data-value="basic">Basic</option>
+                    <option data-value="premium">Premium</option>
+                    <option data-value="luxurious">Luxurious</option>
+                    <option data-value="historic">Historic</option>
+                    <option data-value="custom">Custom</option>
+                </select>
+            </div>
+          
+          <div class="field">
+              <select class="ui fluid dropdown" name="acreage">
+                  <option value="">Acreage</option>
+                    <option value=1>One</option>
+                     <option value=2>Two</option>
+                      <option value=3>Three</option>
+                      <option value=4>Four</option>
+                      <option value=5>Five</option>
+                      <option value=6>Six</option>
+                  </select>
+                </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ui large form">
-        <p class="ui text">Location</p>
-        <div class="two fields">
-          <div class="field">
-            <div class="ui selection dropdown">
-              <input type="hidden" name="lottype">
-              <i class="dropdown icon"></i>
-              <div class="default text">Type</div>
-              <div class="menu">
-                <div class="item" data-value="basic">Basic</div>
-                <div class="item" data-value="premium">Premium</div>
-                <div class="item" data-value="luxurious">Luxurious</div>
-                <div class="item" data-value="historic">Historic</div>
-                <div class="item" data-value="custom">Custom</div>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui selection dropdown">
-              <input type="hidden" name="acreage">
-              <i class="dropdown icon"></i>
-              <div class="default text">Acreage</div>
-              <div class="menu">
-                <div class="item" data-value=1>One</div>
-                <div class="item" data-value=2>Two</div>
-                <div class="item" data-value=3>Three</div>
-                <div class="item" data-value=4>Four</div>
-                <div class="item" data-value=5>Five</div>
-                <div class="item" data-value=6>Six</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ui equal width large form">
-        <p class="ui text">Features</p>
-        <div class="two fields">
-          <div class="field">
-            <div class="grouped fields">
-              <label>Indoor</label>
+        </div><!--- END OF LOCATIONS DROPDOWN ---->
+           
+    <!--- BEGIN CHECKBOX FIELDS ---->
+      <!-- <div class="ui equal width large form"> -->
+   
+      <!--- BEGIN OF INDOOR ---->
+      <div class="eight wide column">
+      <div class="field">       
+        <h4 class="ui dividing header"> Indoor </h4>
+       <div class="five fields">         
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="oven">
                   <label>NASA-Certified Space Oven</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="floor">
                   <label>Hardwood Floors</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="security">
                   <label>24/7 Lunar Home Security</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="gym">
                   <label>Tuff-as-Moonrock&#8482; Gym</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="wifi">
                   <label>Range-extended Wifi</label>
                 </div>
-              </div>
-            </div>
+               </div>
           </div>
-          <div class="field">
-            <div class="grouped fields">
-              <label>Outdoor</label>
+          </div>
+        </div><!--- END OF INDOOR ---->
+        <!---- BEGIN OF OUTDOOR ---->
+
+        <div class="eight wide column">
+        <div class="field">
+        <h4 class="ui dividing header"> Outdoor </h4>
+        <div class="five fields">
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="pool">
                   <label>Antigravity Pool</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="garage">
                   <label>Lunar Rover Garage</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="pad">
                   <label>Rocketship Landing Pad</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="shield">
                   <label>Asteroid Shield</label>
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" name="garden">
                   <label>100% Genetically-modified Garden</label>
                 </div>
               </div>
+              </div>
             </div>
-          </div>
-      </div>
-      <div class="ui equal width field">
+          </div><!--- END OF OUTDOOR ---->
+      <!--- END OF CHECKBOX ---->
+
+      <!--- CALC / CLEAR BUTTONS ---->
+      <div class="ui two fields">
         <div class="field">
           <div class="ui fluid inverted blue submit button" onclick="updateForm()">Calculate</div>
         </div>
-      </div>
-      </form>
-</div>
-</div>
-</div>
-<div id="contact" class="ui inverted vertical footer segment">
-<div class="ui container">
-  <div class="ui stackable inverted divided equal height stackable grid">
-    <div class="three wide column">
-      <h4 class="ui inverted header">Credits</h4>
-      <div class="ui inverted link list">
-        <a href="#" class="item">Tal</a>
-        <a href="#" class="item">Hesham</a>
-        <a href="#" class="item">Haris</a>
-      </div>
-    </div>
-    <div class="seven wide column">
-      <h4 class="ui inverted header"><i class="music icon" style="font-size:18px"></i>Aquatic Ambiance</h4>
-      <audio class="audio" controls="" autoplay>
-        <source src="aquatic-ambiance.mp3" type="audio/mpeg">
-      </audio>
+        <div class="field">
+          <div class="ui fluid inverted blue submit button" onclick="clearForm()">Clear</div>
+        </div>
+      </div><!--- END OF BUTTONS ---->
+      <!--- VALUE TEXT ---->
+       <div class="ui statistics">
+        <div class="blue statistic">
+          <div class="value"><h3></h3></div>
+       </div>
+      </div><!--- END OF VALUE ---->
+    </div><!--- END OF CONTAINER ---->
+  </form><!--- END OF FORM ---->
+  
+ 
+
+
+
+<!-- <div class="ui grid">
+<div id="footer" class="ui inverted vertical stripe segment" style="padding-bottom:5em">
+            <div class="ui two column centered grid">
+                <div class="row">
+                     
+                    <h6 class="ui horizontal inverted header divider">Created by</h6>
+                       <div class="two column centered row">
+                       <div class="column">
+                       <div class="ui large secondary inverted menu">
+                        <a href="https://github.com/HeshamAbdalla/" class="item">Hesham Abdulla</a>
+                        <a class="item">Tal Hurwitz</a>
+                        <a class="item">Haris Muhammad</a>
+                        </div>
+                        </div>
+                    </div>
+               
+            </div>
+        </div>
     </div>
   </div>
-</div>
-</div>
-</div>
 
+ -->
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>

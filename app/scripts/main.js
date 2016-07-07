@@ -97,6 +97,7 @@ function updateForm() {
       total = 0;
   for(var key in form) {
     if(key === 'bedroom') {
+
       switch(form[key]) {
         case '1':
           total += 1.0;
@@ -226,10 +227,9 @@ function updateForm() {
   }
   total = Math.floor(total * 10e6);
   total = total.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-  $('#price').text(total);
+  $('.value h3').text("Estimated Price  "  + " $" + total).transition('pulse');
 }
 
-
-function showModal() {
-    $('.ui.modal').modal({blurring: true}).modal('show');
+function clearForm() {
+  $('form').form('clear');
 }

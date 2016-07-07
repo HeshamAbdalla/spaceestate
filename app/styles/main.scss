@@ -1,7 +1,17 @@
 // bower:scss
 @import "bower_components/slick-carousel/slick/slick.scss";
 // endbower
-
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
 .hidden.menu {
     display: none;
 }
@@ -50,8 +60,8 @@
     padding: 0em;
 }
 .quote.stripe.segment .grid .column {
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
 }
 .footer.segment {
     padding: 5em 0em;
@@ -82,11 +92,6 @@
         font-size: 1.5em;
     }
 }
-/*#banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.38), rgba(27, 28, 29, 0.52)),url(../img/banner.jpg);
-
-    background-size: cover !important;
-}*/
 .house-image {
     width: inherit;
     height: inherit;
@@ -148,11 +153,19 @@
     left: 40%;
 }
 .ui.inverted.segment, .ui.primary.inverted.segment {
-    background: transparent !important;
     padding: 0;
 }
-.ui.secondary.inverted.menu {
-    background: transparent;
-    position: absolute;
-    z-index: 100;
+.ui.inverted.menu {
+    background-color: rgba(27, 28, 29, 0.24) !important;
 }
+// .ui.secondary.inverted.menu {
+//     background: transparent;
+//     position: absolute;
+//     z-index: 100;
+// }
+// .ui.secondary.inverted.menu .right.item{
+//     margin-left: 130% !important;
+// }
+// .ui.secondary.inverted.menu {
+//     margin-left: 7%;
+// }
