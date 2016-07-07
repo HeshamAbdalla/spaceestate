@@ -227,7 +227,7 @@ function updateForm() {
   }
   total = Math.floor(total * 10e6);
   total = total.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-  $('.value h3').text("Estimated Price  "  + " $" + total).transition('pulse');
+  $('.value h3').text('Estimated Price  '  + ' $' + total).transition('pulse');
 }
 
 function clearForm() {
